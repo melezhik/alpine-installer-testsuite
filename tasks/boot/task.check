@@ -1,4 +1,22 @@
 Welcome to Alpine Linux 3.21
 localhost login
-Installing openssh
 
+note: check if we have default packages list
+regexp: "OK:" \s+ (\d+) \s+ "distinct packages available"
+
+generator: <<RAKU
+!raku
+if matched() {
+  my $num = capture()[0];
+  say "assert: ", ($num >= 100 ?? "1" !! "0"), " at least 100 packages are available";
+} 
+RAKU
+
+
+note: check if openssh package
+note: successfully installed
+begin:
+  apk info -e openssh
+  regexp: ^^ \s* $$
+  regexp: ^^ openssh $$
+end:
