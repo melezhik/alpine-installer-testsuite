@@ -42,6 +42,8 @@ tomty boot
 
 # Example report
 
+Full log in text format - https://gist.github.com/melezhik/dd94d53fb016bfb1fbe3d845a5b531c2
+
 ![report](report2.jpeg)
 
 # See also
