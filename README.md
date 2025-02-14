@@ -19,16 +19,6 @@ Raku, python, pexpect, qemu-system-x86_64
 zef install --/test Tomty
 ```
 
-# Configure
-
-These 2 steps won't be required in a future
-
-```bash
-mkdir ~/repo
-export SP6_REPO=file://$HOME/.repo
-s6 --index-update
-```
-
 # Get test iso
 
 ```bash
